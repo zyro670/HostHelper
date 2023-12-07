@@ -213,7 +213,7 @@ namespace HostHelper
                                 // Guest 1
                                 Guest1OT.Text = "Loading...";
                                 Guest1ID.Text = "Loading...";
-                                Guest1NID.Text = $"{NIDs[0]:X16}";
+                                Guest1NID.Text = $"{NIDs[0]}";
                                 await Task.Delay(4_000);
                                 ulong off = await GetPointerAddress(Guest1Pointer, CancellationToken.None);
                                 (OT, ID) = await GetTrainerData(off, CancellationToken.None);
@@ -225,17 +225,17 @@ namespace HostHelper
                                 {
                                     OT = OT,
                                     ID = ID,
-                                    NID = $"{NIDs[0]:X16}",
+                                    NID = $"{NIDs[0]}",
                                 };
                                 SessionList.Add(e);
 
                                 Color c = DefaultColor;
-                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[0]:X16}").Count() > AllowedEntries.Value)
+                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[0]}").Count() > AllowedEntries.Value)
                                 {
                                     c = Color.Gold;
                                     Guest1Status.Image = Resources.cross;
                                 }
-                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[0]:X16}").Any())
+                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[0]}").Any())
                                 {
                                     c = Color.IndianRed;
                                     Guest1Status.Image = Resources.cross;
@@ -251,7 +251,7 @@ namespace HostHelper
                                 // Guest 2
                                 Guest2OT.Text = "Loading...";
                                 Guest2ID.Text = "Loading...";
-                                Guest2NID.Text = $"{NIDs[1]:X16}";
+                                Guest2NID.Text = $"{NIDs[1]}";
                                 await Task.Delay(4_000);
                                 ulong off = await GetPointerAddress(Guest2Pointer, CancellationToken.None);
                                 (OT, ID) = await GetTrainerData(off, CancellationToken.None);
@@ -263,17 +263,17 @@ namespace HostHelper
                                 {
                                     OT = OT,
                                     ID = ID,
-                                    NID = $"{NIDs[1]:X16}",
+                                    NID = $"{NIDs[1]}",
                                 };
                                 SessionList.Add(e);
 
                                 Color c = DefaultColor;
-                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[1]:X16}").Count() > AllowedEntries.Value)
+                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[1]}").Count() > AllowedEntries.Value)
                                 {
                                     c = Color.Gold;
                                     Guest2Status.Image = Resources.cross;
                                 }
-                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[1]:X16}").Any())
+                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[1]}").Any())
                                 {
                                     c = Color.IndianRed;
                                     Guest2Status.Image = Resources.cross;
@@ -289,7 +289,7 @@ namespace HostHelper
                                 // Guest 3
                                 Guest3OT.Text = "Loading...";
                                 Guest3ID.Text = "Loading...";
-                                Guest3NID.Text = $"{NIDs[2]:X16}";
+                                Guest3NID.Text = $"{NIDs[2]}";
                                 await Task.Delay(4_000);
                                 ulong off = await GetPointerAddress(Guest3Pointer, CancellationToken.None);
                                 (OT, ID) = await GetTrainerData(off, CancellationToken.None);
@@ -301,17 +301,17 @@ namespace HostHelper
                                 {
                                     OT = OT,
                                     ID = ID,
-                                    NID = $"{NIDs[2]:X16}",
+                                    NID = $"{NIDs[2]}",
                                 };
                                 SessionList.Add(e);
 
                                 Color c = DefaultColor;
-                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[2]:X16}").Count() > AllowedEntries.Value)
+                                if (SessionList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[2]}").Count() > AllowedEntries.Value)
                                 {
                                     c = Color.Gold;
                                     Guest3Status.Image = Resources.cross;
                                 }
-                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[2]:X16}").Any())
+                                if (BanList.Where(e => (e.OT == OT && e.ID == ID) || e.NID == $"{NIDs[2]}").Any())
                                 {
                                     c = Color.IndianRed;
                                     Guest3Status.Image = Resources.cross;
